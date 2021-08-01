@@ -57,9 +57,39 @@ button {
   color: white;
   margin-top: 8em;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
+#login-btn {
+  padding: 0.5em 3em;
+}
+#create-btn {
+  margin-top: 4em;
+}
+
+#loading-bar-spinner.spinner {
+  animation: loading-bar-spinner 1000ms linear infinite;
+}
+
+#loading-bar-spinner.spinner .spinner-icon {
+  width: 1.3em;
+  height: 1.3em;
+  margin: 2em;
+  border:  solid 4px transparent;
+  border-top-color:  rgb(121, 121, 121);
+  border-left-color: rgb(235, 235, 235) ;
+  border-radius: 50%;
+}
+
+@keyframes loading-bar-spinner {
+0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+.hidden {
+  display: none;
+}
+
+/* <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon hidden"></div></div> */
 .form-footer {
   margin-top: auto;
   color: grey;
@@ -70,7 +100,6 @@ button {
 
 @media (max-width: 480px){
   form {
-    /*height: 95%;*/
     width: 95%;
     margin: 0;
     padding: 1em;
@@ -80,4 +109,11 @@ button {
  button {
    margin: 2em;
  }
+ #create-btn {
+  margin-top: 0.8em;
 }
+.form-footer {
+  display: none;
+}
+}
+

@@ -9,10 +9,11 @@ window.onload = () => {
   formLogin.addEventListener('submit', (e) => {
     e.preventDefault();
     const nombreValido = validarNombre(nombre.value);
-    const contrValido = validarContrasenia(contrasenia.value, repetirContrasenia.value);
+    const contrValido = validarContrasenia(contrasenia.value);
+    const contrIguales = validarIgualdadContr(contrasenia.value, repetirContrasenia.value)
     const emailValido = validarEmail(email.value)
 
-    if (nombreValido && contrValido && emailValido) {
+    if (nombreValido && contrValido && emailValido && contrIguales) {
       const datosUsuario = new DatosUsuario(); 
       datosUsuario.setFirstname(nombre.value);
       datosUsuario.setLastname('DH');
@@ -26,6 +27,11 @@ window.onload = () => {
       }).catch( err => {
         console.log(err)
       })
+    }else{
+      mostrarErrorNombre(nombreValido);
+      mostrarErrorContr(contrValido);
+      mostrarErrorContrIguales(contrIguales);
+      mostrarErrorEmail(emailValido)
     }
   })
 }
@@ -38,11 +44,12 @@ function validarNombre(valor) {
   return !test && logitudCorrecta;
 }
 
-function validarContrasenia(contrasenia, repetirContrasenia) {
-  const coincidentes = contrasenia == repetirContrasenia;
-  const logitudCorrecta = contrasenia.length > 7;
+function validarContrasenia(contrasenia) {
+  return contrasenia.length > 7;
+}
 
-  return coincidentes && logitudCorrecta;
+function validarIgualdadContr(contrasenia, repetirContrasenia){
+  return contrasenia == repetirContrasenia;
 }
 
 function validarEmail(email) {
@@ -51,3 +58,37 @@ function validarEmail(email) {
   return test;
 }
 
+function mostrarErrorNombre(nombreValido){
+  let div = document.getElementById("name-error")
+  if (!nombreValido){
+   div.innerHTML = `
+   <p>El nombre debe tener más de 2 caracteres.</p>
+ `
+   }
+}
+function mostrarErrorContr(contrValido){
+  let div = document.getElementById("pass-error")
+  if (!contrValido){
+   div.innerHTML = `
+   <p>La contraseña debe tener más de 7 caracteres.</p>
+ `
+   }
+}
+
+function mostrarErrorContrIguales(contrIguales){
+  let div = document.getElementById("pass2-error")
+  if (!contrIguales){
+   div.innerHTML = `
+   <p>Las contraseñas no coinciden.</p>
+ `
+   }
+}
+
+function mostrarErrorEmail(emailValido){
+  let div = document.getElementById("email-error")
+  if (!emailValido){
+   div.innerHTML = `
+   <p>El email no es valido.</p>
+ `
+   }
+}
