@@ -1,5 +1,4 @@
 window.onload = () => {
-
   const form = document.forms.formLogin;
 
   form.addEventListener('submit', e => {
@@ -35,7 +34,7 @@ function mostrarErrorLogin(){
      let loginBtn= document.getElementById("login-btn")
      spinner.classList.remove("hidden")
      loginBtn.classList.add("hidden")
-     setTimeout(ocultarSpinner, 5000)
+     setTimeout(ocultarSpinner, 4000)
    }
    function ocultarSpinner(){
     let spinner = document.getElementById("loading-bar-spinner")
@@ -43,3 +42,4 @@ function mostrarErrorLogin(){
     spinner.classList.add("hidden")
     loginBtn.classList.remove("hidden")
   }
+

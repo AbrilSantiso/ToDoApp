@@ -1,4 +1,5 @@
 window.onload = () => {
+  mostrarBienvenida()
   const formLogin = document.forms.formLogin;
 
   const nombre = formLogin.nombre;
@@ -91,4 +92,13 @@ function mostrarErrorEmail(emailValido){
    <p>El email no es valido.</p>
  `
    }
+}
+function mostrarBienvenida(){
+  Swal.fire({
+    title: 'Bienvenido a ToDoApp!',
+    text: "Para poder usarla, deberas crear una cuenta con tu nombre (mayor a 2 caracteres), una contraseña (mayor a 7 caracteres), y tu email.",
+    width: 600,
+    padding: '3em',
+    background: '#fff8f1',
+  })
 }

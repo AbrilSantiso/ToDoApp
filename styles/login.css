@@ -55,7 +55,8 @@ button {
   background-color: var(--primary);
   background: linear-gradient(var(--primary), var(--secondary));
   color: white;
-  margin-top: 8em;
+  margin-top: 6em;
+  margin-bottom: 2em;
   font-weight: 400;
   font-size: 1.2em;
 }
@@ -88,8 +89,9 @@ button {
 .hidden {
   display: none;
 }
-
-/* <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon hidden"></div></div> */
+#login-error{
+  margin-top: 2em;
+}
 .form-footer {
   margin-top: auto;
   color: grey;

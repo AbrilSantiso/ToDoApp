@@ -113,9 +113,5 @@ function eliminarTarea(id) {
   })
   
 
- /* if (!confirm('Esta seguro que desea eliminar la tarea?')) {
-    return;
-  } */
-
 }
 
