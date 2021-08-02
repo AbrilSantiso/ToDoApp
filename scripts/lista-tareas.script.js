@@ -1,9 +1,10 @@
 window.onload = () => {
   getTareas();
-
+  cargarUserName();
   document.forms.agregarTarea.addEventListener( 'submit', event => {
     event.preventDefault();
-    agregarTarea()
+    agregarTarea();
+    document.forms.agregarTarea.descripcionNuevaTarea.value = "";
   });
 }
 
@@ -66,7 +67,8 @@ function agregarTarea() {
 
 
 function getTareas() {
-  RequestManager.get('/tasks').then(tareas => {
+  RequestManager.get('/tasks')
+  .then(tareas => {
     crearTareas(tareas);
   })
 }
@@ -115,3 +117,11 @@ function eliminarTarea(id) {
 
 }
 
+function cargarUserName(){
+  let userInfo = document.getElementById("user-name");
+  RequestManager.get("/users/getMe")
+  .then(user => {
+     userInfo.innerText += `Tareas de ${user.firstName}`;
+  });
+
+}

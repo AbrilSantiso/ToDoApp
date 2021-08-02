@@ -6,7 +6,6 @@ class RequestManager {
   }
 
   static get(endPoint) {
-    console.log('obtenido por request manager')
     return fetch(RequestManager.baseUrl + endPoint, {
       headers: {
         authorization: RequestManager.getToken()
