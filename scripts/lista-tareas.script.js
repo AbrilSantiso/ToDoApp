@@ -127,18 +127,16 @@ function cargarUserName(){
   });
 }
 function darkMode(){
+  let theme = document.getElementById("theme");
   const btnSwitch = document.querySelector(".switch");
-  const header = document.querySelector("header");
-  const btnsTrash = document.querySelector(".eliminar")
+  
   btnSwitch.addEventListener("click", ()=>{
-    document.body.classList.toggle("dark");
     btnSwitch.classList.toggle("active");
-    header.classList.toggle("dark");
-   /* btnsTrash.forEach(btnTrash => {
-      btnTrash.classList.toggle("dark");
-    });*/
-    console.log(btnsTrash)
-    
+    if (theme.getAttribute("href") == "./styles/lista-tareas.css") {
+      theme.href = "./styles/dark-mode.css";
+    } else {
+      theme.href = "./styles/lista-tareas.css";
+    }
   })
 }
 

@@ -73,17 +73,14 @@ a {
   background-color: transparent;
   margin-left: 2em;
   margin-right: 1em;
-  opacity: .5;
+  opacity: .3;
+  font-size: 1.5em;
 }
 
 .nueva-tarea button:hover {
   opacity: 1;
 }
 
-.nueva-tarea button img {
-  height: 100%;
-  width: 100%;
-}
 
 .not-done {
   width: 2em;
@@ -100,6 +97,7 @@ a {
 .tareas-pendientes {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 70%;
   list-style: none;
   margin: 2em 15%;
@@ -171,7 +169,7 @@ a {
 
 .tarea .eliminar {
   background-color: transparent;
-  color: #9774db;
+  color:  var(--secondary);
   font-size: 20px;
   padding: .1em .5em;
   margin-left: 1em;
@@ -226,6 +224,7 @@ a {
 
 .tareas-terminadas {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 70%;
   list-style: none;
@@ -290,19 +289,7 @@ a {
   background: rgb(255, 167, 4);
   color: black;
 }
-.active::after{
-  right: 0;
-  left: unset;
-}
- body.dark {
-  background-color: rgb(7, 9, 27) ;
-}
-header.dark {
-  background: rgb(2, 2, 7) ;
-}
-.tarea .eliminar .dark {
-  color: rgb(7, 9, 27);
-}
+
 /* -------- Responsive ------------------------------------ */
 
 @media (max-width: 760px) {
