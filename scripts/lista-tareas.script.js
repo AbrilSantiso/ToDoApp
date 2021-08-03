@@ -1,10 +1,12 @@
 window.onload = () => {
   getTareas();
   cargarUserName();
+  darkMode()
   document.forms.agregarTarea.addEventListener( 'submit', event => {
     event.preventDefault();
     agregarTarea();
     document.forms.agregarTarea.descripcionNuevaTarea.value = "";
+    
   });
 }
 
@@ -123,5 +125,20 @@ function cargarUserName(){
   .then(user => {
      userInfo.innerText += `Tareas de ${user.firstName}`;
   });
-
 }
+function darkMode(){
+  const btnSwitch = document.querySelector(".switch");
+  const header = document.querySelector("header");
+  const btnsTrash = document.querySelector(".eliminar")
+  btnSwitch.addEventListener("click", ()=>{
+    document.body.classList.toggle("dark");
+    btnSwitch.classList.toggle("active");
+    header.classList.toggle("dark");
+   /* btnsTrash.forEach(btnTrash => {
+      btnTrash.classList.toggle("dark");
+    });*/
+    console.log(btnsTrash)
+    
+  })
+}
+
