@@ -108,6 +108,7 @@ a {
   display: flex;
   align-items: center;
   margin-bottom: 1.5em;
+  word-wrap: break-word;
 }
 
 .tarea .not-done {
@@ -201,6 +202,9 @@ a {
 .tarea .nombre.loading {
   width: 40em;
 }
+.tarea .nombre {
+  max-width: 50vw;
+}
 
 /*------ Tareas terminadas ----------------------------------------------------------- */
 
@@ -248,8 +252,11 @@ a {
 
 /* -------- Responsive ------------------------------------ */
 
-@media (max-width: 480px) {
-  .tarea .descripcion {
-    width: 0.9vw;
+@media (max-width: 760px) {
+  .timestamp {
+    display: none;
+  }
+  .nombre {
+    width: 40vw;
   }
 }

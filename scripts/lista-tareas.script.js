@@ -31,7 +31,7 @@ function crearTareas(tareas) {
 
 function renderizarTarea(tarea) {
   const template = `
-    <li class="tarea animar-entrada">
+    <li class="tarea nueva animar-entrada">
       <div class="not-done" onclick='completarTarea(${tarea.id}, ${tarea.completed})'></div>
       <div class="descripcion">
         <p class="nombre">${tarea.description}</p>
