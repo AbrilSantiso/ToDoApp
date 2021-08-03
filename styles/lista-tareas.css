@@ -92,6 +92,7 @@ a {
   margin-right: 1em;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 90;
 }
 
 /* Lista de tareas ----------------------------------------------------------- */
@@ -259,4 +260,15 @@ a {
   .nombre {
     width: 40vw;
   }
+  .tarea:first-child .not-done::before {
+    display: none;
+  }
+  
+  .tarea:not(:last-child) .not-done::after {
+    display: none;
+  }
+  .not-done {
+    margin: 0.5em;
+  }
+ 
 }
