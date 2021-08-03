@@ -63,15 +63,15 @@ function mostrarErrorNombre(nombreValido){
   let div = document.getElementById("name-error")
   if (!nombreValido){
    div.innerHTML = `
-   <p>El nombre debe tener más de 2 caracteres.</p>
+   El nombre debe tener más de 2 caracteres.
  `
    }
 }
 function mostrarErrorContr(contrValido){
   let div = document.getElementById("pass-error")
   if (!contrValido){
-   div.innerHTML = `
-   <p>La contraseña debe tener más de 7 caracteres.</p>
+   div.innerText = `
+   La contraseña debe tener más de 7 caracteres.
  `
    }
 }
@@ -80,7 +80,7 @@ function mostrarErrorContrIguales(contrIguales){
   let div = document.getElementById("pass2-error")
   if (!contrIguales){
    div.innerHTML = `
-   <p>Las contraseñas no coinciden.</p>
+   Las contraseñas no coinciden.
  `
    }
 }
@@ -89,7 +89,7 @@ function mostrarErrorEmail(emailValido){
   let div = document.getElementById("email-error")
   if (!emailValido){
    div.innerHTML = `
-   <p>El email no es valido.</p>
+   El email no es valido.
  `
    }
 }
