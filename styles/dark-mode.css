@@ -18,6 +18,7 @@
   }
   header {
     background: var(--secondary-dark);
+    box-shadow: 3px 3px 15px rgb(0, 0, 0);
   }
   /* DARK-TAREAS*/
   .tarea .nombre {
@@ -29,18 +30,23 @@
   }
   .tarea .descripcion {
       background-color: var(--tasks-dark);
+      box-shadow: 3px 3px 5px rgb(0, 0, 0);
   }
   .tareas-terminadas .tarea .descripcion {
     background-color: var(--finished-tasks-dark);
+  }
+  .not-done {
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
   }
 
   /*----Dark Nueva Tarea---*/
   .nueva-tarea {
     background-color: var(--primary-dark);
-    box-shadow: 2px 2px 10px lightgrey;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
 }
 .nueva-tarea input[type=text] {
     border: 0;
+    border-bottom: 1px solid white;
 }
 .nueva-tarea input::placeholder {
     background-color: var(--primary-dark);
