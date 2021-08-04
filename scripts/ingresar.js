@@ -22,11 +22,5 @@ window.onload = () => {
 
 }
 
-function mostrarErrorLogin(){
-  let div = document.getElementById("login-error")
-   div.innerHTML = `
-   <p>El email o contraseña son incorrectos.</p>
- `
-   }
 
 
