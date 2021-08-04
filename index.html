@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="./styles/login.css">
   <script src="./scripts/crear_cuenta.js"></script>
   <script src="./scripts/models/usuario.modelo.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./scripts/services/request-manager.servicio.js"></script>
+  <script src="./scripts/services/spinner.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
   <title>ToDo App</title>
 </head>
 <body>
@@ -48,8 +50,8 @@
     <div class="error-msg" id="email-error">
       <p id="mail-error"></p>
     </div>
-
-    <button id= "create-btn">Crear Cuenta</button>
+    <div id="loading-bar-spinner" class="spinner hidden"><div class="spinner-icon"></div></div>
+    <button id= "create-btn" class="commonBtn">Crear Cuenta</button>
 
     <a href="login.html">Ya tienes una cuenta? Iniciá sesion</a>
 

@@ -21,7 +21,39 @@ button {
   border: none;
   border-radius: 3px;
 }
-/*-----errores HACERLO CON TODS!!!!*/
+
+/*------SPINNER----------*/
+#loading-bar-spinner.spinner {
+  animation: loading-bar-spinner 1000ms linear infinite;
+}
+
+#loading-bar-spinner.spinner .spinner-icon {
+  width: 1.3em;
+  height: 1.3em;
+  margin: 2em;
+  border:  solid 4px transparent;
+  border-top-color:  rgb(121, 121, 121);
+  border-left-color: rgb(235, 235, 235) ;
+  border-radius: 50%;
+}
+
+@keyframes loading-bar-spinner {
+0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+.hidden {
+  display: none;
+}
+#login-error{
+  margin-top: 2em;
+}
+.form-footer {
+  margin-top: auto;
+  color: grey;
+  font-size: 2em;
+}
+
+/*-----errores------*/
 #pass-error, #mail-error, #name-error, #pass2-error {
   height: 1.5rem;
 }

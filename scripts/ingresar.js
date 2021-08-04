@@ -7,7 +7,7 @@ window.onload = () => {
     const email = form.email.value;
     const password = form.contrasenia.value;
 
-    mostrarSpinner()
+    mostrarSpinner();
 
     RequestManager.post("/users/login",{email, password} )
     .then(datos => {
@@ -29,17 +29,4 @@ function mostrarErrorLogin(){
  `
    }
 
-   function mostrarSpinner(){
-     let spinner = document.getElementById("loading-bar-spinner")
-     let loginBtn= document.getElementById("login-btn")
-     spinner.classList.remove("hidden")
-     loginBtn.classList.add("hidden")
-     setTimeout(ocultarSpinner, 4000)
-   }
-   function ocultarSpinner(){
-    let spinner = document.getElementById("loading-bar-spinner")
-    let loginBtn= document.getElementById("login-btn")
-    spinner.classList.add("hidden")
-    loginBtn.classList.remove("hidden")
-  }
 

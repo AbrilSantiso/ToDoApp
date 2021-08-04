@@ -6,7 +6,9 @@
     --secondary-dark: rgb(19, 19, 24);
     --tasks-dark: #2b2b55;
     --finished-tasks-dark: rgba(51, 50, 50, 0.89);
-    --app-grey: #F2F2F2;
+    --app-grey: rgb(170, 170, 170);
+    --shadow-dark: rgb(0, 0, 0);
+
   }
 
 .active::after{
@@ -18,9 +20,11 @@
   }
   header {
     background: var(--secondary-dark);
-    box-shadow: 3px 3px 15px rgb(0, 0, 0);
+    box-shadow: 3px 3px 15px var(--shadow-dark);
   }
-  /* DARK-TAREAS*/
+
+
+  /*----------TAREAS-----------------------------------------------------------------*/
   .tarea .nombre {
     color: white;
   }
@@ -30,38 +34,41 @@
   }
   .tarea .descripcion {
       background-color: var(--tasks-dark);
-      box-shadow: 3px 3px 5px rgb(0, 0, 0);
+      box-shadow: 3px 3px 5px var(--shadow-dark);;
   }
   .tareas-terminadas .tarea .descripcion {
     background-color: var(--finished-tasks-dark);
   }
   .not-done {
-    box-shadow: 3px 3px 5px rgb(0, 0, 0);
+    box-shadow: 3px 3px 5px var(--shadow-dark);
   }
 
-  /*----Dark Nueva Tarea---*/
+
+  /*----------NUEVA TAREA -------------------------------------------------------*/
   .nueva-tarea {
     background-color: var(--primary-dark);
-    box-shadow: 3px 3px 5px rgb(0, 0, 0);
+    box-shadow: 3px 3px 5px var(--shadow-dark);
 }
 .nueva-tarea input[type=text] {
     border: 0;
     border-bottom: 1px solid white;
+    color: white;
 }
 .nueva-tarea input::placeholder {
     background-color: var(--primary-dark);
-    color: rgba(255, 255, 255, 0.76);
+    color: var(--app-grey);
     text-indent: .2em;
   }
   .nueva-tarea button {
     color: white;
     opacity: 1;
   }
-  /* Dark- terminadas*/
+
+  /*----------TAREAS TERMINADAS----------------------------------*/
   .titulo-terminadas {
     background-color: var(--primary-dark);
-    box-shadow: 3px 3px 5px rgb(0, 0, 0);
-    color: rgb(170, 170, 170);
+    box-shadow: 3px 3px 5px var(--shadow-dark);
+    color: var(--app-grey);
   }
   input {
       background-color: var(--primary-dark);;

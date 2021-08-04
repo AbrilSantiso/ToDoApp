@@ -9,7 +9,7 @@ h1 {
 
 form {
   position: relative;
-  height: 100vh;
+  height: 150vh;
   width: 30em;
   background-color: white;
   display: flex;
@@ -68,35 +68,6 @@ button {
   margin-top: 4em;
 }
 
-#loading-bar-spinner.spinner {
-  animation: loading-bar-spinner 1000ms linear infinite;
-}
-
-#loading-bar-spinner.spinner .spinner-icon {
-  width: 1.3em;
-  height: 1.3em;
-  margin: 2em;
-  border:  solid 4px transparent;
-  border-top-color:  rgb(121, 121, 121);
-  border-left-color: rgb(235, 235, 235) ;
-  border-radius: 50%;
-}
-
-@keyframes loading-bar-spinner {
-0%   { transform: rotate(0deg);   transform: rotate(0deg); }
-100% { transform: rotate(360deg); transform: rotate(360deg); }
-}
-.hidden {
-  display: none;
-}
-#login-error{
-  margin-top: 2em;
-}
-.form-footer {
-  margin-top: auto;
-  color: grey;
-  font-size: 2em;
-}
 
 /* -------- Responsive ------------*/
 

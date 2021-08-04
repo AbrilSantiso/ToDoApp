@@ -9,6 +9,7 @@ window.onload = () => {
 
   formLogin.addEventListener('submit', (e) => {
     e.preventDefault();
+    mostrarSpinner();
     const nombreValido = validarNombre(nombre.value);
     const contrValido = validarContrasenia(contrasenia.value);
     const contrIguales = validarIgualdadContr(contrasenia.value, repetirContrasenia.value)

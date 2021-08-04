@@ -33,7 +33,7 @@ a {
   margin-left: .7em;
 }
 
-/* Nueva tarea ----------------------------------------------------------- */
+/*------------- Nueva tarea ----------------------------------------------------------- */
 
 .nueva-tarea {
   position: relative;
@@ -93,7 +93,7 @@ a {
   z-index: 90;
 }
 
-/* Lista de tareas ----------------------------------------------------------- */
+/*--------------- Lista de tareas ----------------------------------------------------------- */
 
 .tareas-pendientes {
   display: flex;
@@ -206,7 +206,7 @@ a {
   max-width: 50vw;
 }
 
-/*------ Tareas terminadas ----------------------------------------------------------- */
+/*-------------------- Tareas terminadas ----------------------------------------------------------- */
 
 .titulo-terminadas {
   position: relative;
@@ -252,7 +252,7 @@ a {
 }
 
 
-/*-----DARK-LIGHT-MODE */
+/*-------------DARK-LIGHT-MODE------------------------------- */
 .switch {
   background: #343D5B;
   border-radius: 20px;
@@ -293,9 +293,11 @@ a {
   color: black;
 }
 
-/* -------- Responsive ------------------------------------ */
+/* ---------------------- Responsive ------------------------------------ */
 
 @media (max-width: 760px) {
+
+  /* ---------------------- Tareas------------------------------------ */
   .timestamp {
     display: none;
   }
@@ -314,9 +316,11 @@ a {
     width: 10%;
     height: 10%;
   }
+  /* ---------------------- BOTON DARKMODE ------------------------------------ */
  .switch{
    left: 5%
  }
+   /* ---------------------- CONTENEDORES TAREAS ------------------------------------ */
  .tareas-pendientes {
   margin: 2em 5%;
 }
@@ -326,6 +330,8 @@ a {
 .titulo-terminadas {
   margin-left: 2%;
 }
+
+ /* ---------------------- BOTON NUEVA TAREA ------------------------------------ */
 .nueva-tarea button {
   margin-left: 0;
   margin-right: 0;
