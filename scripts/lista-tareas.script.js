@@ -1,4 +1,5 @@
 window.onload = () => {
+  comprobarToken();
   getTareas();
   cargarUserName();
   darkMode()
@@ -6,14 +7,10 @@ window.onload = () => {
     event.preventDefault();
     agregarTarea();
     document.forms.agregarTarea.descripcionNuevaTarea.value = "";
-    
   });
+  cerrarSesion();
 }
 
-comprobarToken();
-setInterval(() => {
-  comprobarToken();
-}, 100000)
 
 function comprobarToken() {
   const token = RequestManager.getToken();
@@ -123,9 +120,10 @@ function cargarUserName(){
   let userInfo = document.getElementById("user-name");
   RequestManager.get("/users/getMe")
   .then(user => {
-     userInfo.innerText += `Tareas de ${user.firstName}`;
+     userInfo.innerHTML += `Tareas de <b>${user.firstName}</b>`;
   });
 }
+
 function darkMode(){
   let theme = document.getElementById("theme");
   const btnSwitch = document.querySelector(".switch");
@@ -141,5 +139,9 @@ function darkMode(){
 }
 
 function cerrarSesion(){
-  
+  const logOutBtn = document.getElementById("log-out");
+  logOutBtn.addEventListener("click", ()=>{
+    location.href = './login.html'
+    localStorage.clear();
+  })
 }
