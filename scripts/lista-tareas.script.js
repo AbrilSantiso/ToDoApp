@@ -8,7 +8,6 @@ window.onload = () => {
     agregarTarea();
     document.forms.agregarTarea.descripcionNuevaTarea.value = "";
   });
-  cerrarSesion();
 }
 
 
@@ -139,9 +138,17 @@ function darkMode(){
 }
 
 function cerrarSesion(){
-  const logOutBtn = document.getElementById("log-out");
-  logOutBtn.addEventListener("click", ()=>{
     location.href = './login.html'
-    localStorage.clear();
-  })
+    localStorage.removeItem("token");
+}
+
+function mostrarMenu(){
+  const menu = document.querySelector(".menu");
+  const contNombre = document.querySelector("#user-name-menu");
+
+  menu.classList.toggle("hidden");
+  RequestManager.get("/users/getMe")
+  .then(user => {
+     contNombre.innerHTML = `¡Hola, <b>${user.firstName}</b>!`;
+  });
 }

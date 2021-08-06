@@ -18,7 +18,12 @@
 <body>
   <header>
     <nav>
-      <a href="#">ToDo App</a>
+      <i class="fas fa-bars" id="menu-icon" onclick="mostrarMenu()"></i>
+      <ul class="menu hidden">
+        <li id="user-name-menu"></li>
+        <li onclick='cerrarSesion()'>Cerrar Sesion</li>
+      </ul>
+      <a href="#" id="logo">ToDo App</a>
     </nav>
 
     <button class="switch" id="switch">
@@ -30,10 +35,10 @@
      <p id="user-name"></p>
     </div>
     
-    <button id="log-out">Cerrar sesión</button>
+    <button id="log-out" onclick='cerrarSesion()'>Cerrar sesión</button>
   </header>
 
-
+  
   <form id="agregarTarea" class="nueva-tarea">
     <div></div>
     <input type="text" name="descripcionNuevaTarea" placeholder="Nueva tarea">

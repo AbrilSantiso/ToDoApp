@@ -1,5 +1,7 @@
 @import url('./common.css');
 
+/*---------HEADER-----------------*/
+
 header {
   display: flex;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -45,6 +47,10 @@ a {
 }
 #log-out:hover {
 color:  lightgray;
+}
+
+ #menu-icon {
+  display: none;
 }
 
 /*------------- Nueva tarea ----------------------------------------------------------- */
@@ -310,11 +316,32 @@ color:  lightgray;
 /* ---------------------- Responsive ------------------------------------ */
 
 @media (max-width: 760px) {
+
   /* ----------------------Header------------------------------------ */
-  .user-info {
+  .user-info, #log-out, #logo {
    display: none;
   }
-
+  #menu-icon {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: white;
+  }
+  .menu{
+    color: white;
+  }
+  .menu li {
+    font-size: 20px;
+    padding: 3px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 1.5s ease;
+    margin-bottom: 5px;
+  }
+  .menu li#user-name-menu {
+    font-size: 25px;
+  }
+  
   /* ---------------------- Tareas------------------------------------ */
   .timestamp {
     display: none;
@@ -336,7 +363,7 @@ color:  lightgray;
   }
   /* ---------------------- BOTON DARKMODE ------------------------------------ */
  .switch{
-   margin-left: 40%;
+   margin-left: 50%;
  }
    /* ---------------------- CONTENEDORES TAREAS ------------------------------------ */
  .tareas-pendientes {

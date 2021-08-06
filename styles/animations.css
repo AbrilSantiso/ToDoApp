@@ -34,7 +34,7 @@
 
   animation-name: loadingTask;
   animation-iteration-count: infinite;
-  animation-duration: 500ms;
+  animation-duration: 600ms;
 }
 
 .tarea.loading .descripcion .timestamp {
